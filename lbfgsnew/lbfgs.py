@@ -7,7 +7,7 @@ from torch.optim.optimizer import Optimizer
 be_verbose = False
 
 
-class LBFGSNew(Optimizer):
+class LBFGS(Optimizer):
     """Implements L-BFGS algorithm.
 
     .. warning::
@@ -85,7 +85,7 @@ class LBFGSNew(Optimizer):
             batch_mode=batch_mode,
             cost_use_gradient=cost_use_gradient,
         )
-        super(LBFGSNew, self).__init__(params, defaults)
+        super(LBFGS, self).__init__(params, defaults)
 
         if len(self.param_groups) != 1:
             raise ValueError(
