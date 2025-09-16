@@ -6,3 +6,8 @@ build-backend = "setuptools.build_meta"
 name = "lbfgsnew"
 version = "0.1.0"
 dependencies = []
+
+dependencies = [
+    "functools",
+    "torch>=2.6.0",
+]
